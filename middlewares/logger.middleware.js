@@ -1,5 +1,3 @@
-// Backend/middlewares/logger.middleware.js
-
 const logger = (req, res, next) => {
   const start = Date.now();
 
