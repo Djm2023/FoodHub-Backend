@@ -1,6 +1,6 @@
 // Backend/server.js
 
-require("dotenv").config({ path: "./.env" });
+require("dotenv").config();
 
 const app = require("./app");
 const connectDB = require("./config/db");
