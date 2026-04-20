@@ -25,6 +25,11 @@ const restaurantSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+
+    isVeg: {
+      type: Boolean,
+      default: true,
+    },
   },
   { timestamps: true },
 );

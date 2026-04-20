@@ -7,7 +7,7 @@ const Category = require("../models/category.model");
 // ✅ List with search + pagination
 exports.getRestaurants = async (req, res) => {
   const data = await Restaurant.find().select(
-    "name image rating deliveryTime cuisines costForTwo isOpen",
+    "name image rating deliveryTime cuisines costForTwo isOpen isVeg",
   );
 
   const banners = await Banner.find({ isActive: true }).sort({ priority: 1 });

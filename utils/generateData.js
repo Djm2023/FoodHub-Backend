@@ -112,6 +112,7 @@ const generateData = () => {
       costForTwo: `₹${Math.floor(Math.random() * 500) + 200}`,
       categories,
       isOpen: Math.random() > 0.1,
+      isVeg: i % 5 === 0,
     });
   }
 

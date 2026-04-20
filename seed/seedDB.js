@@ -1,6 +1,7 @@
-// src/seed/seedDB.js
-
-require("dotenv").config({ path: "../.env" });
+const path = require("path");
+require("dotenv").config({
+  path: path.resolve(__dirname, "../.env"),
+});
 const mongoose = require("mongoose");
 const Restaurant = require("../models/restaurant.model");
 const Banner = require("../models/banner.model");
@@ -8,6 +9,8 @@ const bannerData = require("../utils/bannerData");
 const Category = require("../models/category.model");
 const categoryData = require("../utils/categoryData");
 const generateData = require("../utils/generateData");
+
+console.log("process.env.MONGO_URI", process.env.MONGO_URI, "process.env.MONGO_URI");
 
 mongoose.connect(process.env.MONGO_URI).then(async () => {
   const data = generateData();
